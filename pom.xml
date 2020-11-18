@@ -25,8 +25,13 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<tinkerpop.version>3.4.8</tinkerpop.version>
-		<rdf4j.version>3.4.3</rdf4j.version>
+		<rdf4j.version>3.4.4</rdf4j.version>
 	</properties>
+	<scm>
+		<connection>scm:git:git@github.com:pulquero/tinkerpopstar.git</connection>
+		<developerConnection>scm:git:git@github.com:pulquero/tinkerpopstar.git</developerConnection>
+		<url>https://github.com/pulquero/tinkerpopstar</url>
+	</scm>
 	<build>
 		<plugins>
 			<plugin>
