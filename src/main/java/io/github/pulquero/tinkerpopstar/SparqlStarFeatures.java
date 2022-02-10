@@ -24,6 +24,7 @@ public class SparqlStarFeatures implements Features {
         return new VertexFeatures() {
     		@Override public boolean supportsNumericIds() { return false; }
     		@Override public boolean supportsAnyIds() { return false; }
+        	@Override public boolean supportsNullPropertyValues() { return false; }
             @Override public boolean supportsDuplicateMultiProperties() { return false; }
             @Override public boolean supportsMetaProperties() { return false; }
             @Override public VertexProperty.Cardinality getCardinality(String key) { return VertexProperty.Cardinality.set; }
@@ -48,6 +49,7 @@ public class SparqlStarFeatures implements Features {
             @Override public boolean supportsNumericIds() { return false; }
             @Override public boolean supportsUuidIds() { return false; }
             @Override public boolean supportsAnyIds() { return false; }
+        	@Override public boolean supportsNullPropertyValues() { return false; }
             @Override
         	public boolean willAllowId(Object o) {
         		return (o instanceof Triple);

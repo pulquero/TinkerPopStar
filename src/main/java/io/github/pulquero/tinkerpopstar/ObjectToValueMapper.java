@@ -15,8 +15,7 @@ import org.eclipse.rdf4j.model.IRI;
 import org.eclipse.rdf4j.model.Literal;
 import org.eclipse.rdf4j.model.Value;
 import org.eclipse.rdf4j.model.ValueFactory;
-import org.eclipse.rdf4j.model.util.LiteralUtilException;
-import org.eclipse.rdf4j.model.util.Literals;
+import org.eclipse.rdf4j.model.util.Values;
 import org.eclipse.rdf4j.model.vocabulary.XSD;
 
 public class ObjectToValueMapper implements RdfMapper<Object,Value> {
@@ -26,8 +25,8 @@ public class ObjectToValueMapper implements RdfMapper<Object,Value> {
 			return vf.createIRI(SparqlStarGraph.UUID_NS, ((UUID)o).toString());
 		}
 		try {
-			return Literals.createLiteralOrFail(vf, o);
-		} catch (LiteralUtilException e) {
+			return Values.literal(vf, o, true);
+		} catch (IllegalArgumentException e) {
 			if (o instanceof Serializable) {
 				ByteArrayOutputStream bout = new ByteArrayOutputStream();
 				try(ObjectOutputStream out = new ObjectOutputStream(bout)) {

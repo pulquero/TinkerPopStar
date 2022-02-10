@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.pulquero.tinkerpopstar</groupId>
 	<artifactId>tinkerpopstar</artifactId>
-	<version>1.0</version>
+	<version>1.1</version>
 	<name>TinkerPopStar</name>
 	<description>TinkerPop over SPARQL*</description>
 	<url>https://github.com/pulquero/tinkerpopstar</url>
@@ -24,8 +24,8 @@
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<tinkerpop.version>3.4.8</tinkerpop.version>
-		<rdf4j.version>3.4.4</rdf4j.version>
+		<tinkerpop.version>3.5.2</tinkerpop.version>
+		<rdf4j.version>3.7.4</rdf4j.version>
 	</properties>
 	<scm>
 		<connection>scm:git:git@github.com:pulquero/tinkerpopstar.git</connection>

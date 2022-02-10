@@ -1,23 +1,23 @@
 # TinkerPopStar
 
-[![CI](https://api.travis-ci.org/pulquero/tinkerpopstar.svg?branch=latest)](https://travis-ci.org/pulquero/tinkerpopstar)
-[![Coverage](https://codecov.io/github/pulquero/tinkerpopstar/coverage.svg?branch=latest)](https://codecov.io/gh/pulquero/tinkerpopstar/)
+![CI](https://github.com/pulquero/tinkerpopstar/actions/workflows/ci.yml/badge.svg)
+[![Coverage](https://codecov.io/github/pulquero/tinkerpopstar/coverage.svg?branch=main)](https://codecov.io/gh/pulquero/tinkerpopstar/)
 
-**TinkerPop over SPARQL\***
+**TinkerPop over SPARQL-star**
 
 Do you want Gremlins in your RDF store? Then you have come to the right place!
 
-This is an implementation of [Gremlin/TinkerPop](https://tinkerpop.apache.org/) over SPARQL*. You can do two things with it:
+This is an implementation of [Gremlin/TinkerPop](https://tinkerpop.apache.org/) over SPARQL-star. You can do two things with it:
 
 ##### 1) I have no interest in RDF, I happen to have a triple store and just want to use it as a storage back-end.
   
-If your triple store supports SPARQL* then you can just point `SparqlStarGraph` at it, and Gremlin away as normal.
+If your triple store supports SPARQL-star then you can just point `SparqlStarGraph` at it, and Gremlin away as normal.
 We support the majority of graph features so maybe we can do something that your current implementation can't (or do it better).
 
 ##### 2) I ❤️ RDF, but I want to take advantage of some of the TinkerPop stack.
 
 Most graph analytic tools assume a standard definition of a graph, but RDF isn't (it is a directed 3-uniform hypergraph,
-and that is before we throw in named graphs and RDF*).
+and that is before we throw in named graphs and RDF-star).
 TinkerPopStar lets you expose a slice of your RDF data as a standard graph and use Gremlin to process it.
 Real-world data often does not have the structure of a standard graph, so RDF can provide a good fit.
 At the other end, analytics need a standard graph. TinkerPopStar can provide the bridge.
